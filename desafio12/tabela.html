@@ -12,74 +12,83 @@
             border-collapse: collapse;
             width: 600px;
                }
+               
+        tr.linha-espacial th {
+            text-align: left;
+        }
                th, td{
                 border: 1px solid black;
                 padding: 10px;
-                
+                text-align: center;
                }
                th{
                 background-color: darkgray;
                }
+               .materias {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
     <table>
         <thead>
-            <tr>
-                <th>Área</th>
-                <th>Disciplinas</th>
-                <th>Notas <br>
-                Nota 1 Nota 2</th>
-                <th colspan="2">Media</th>
-                
-            </tr>
+                <tr>
+                    <th rowspan="2" scope="col">Área</th>
+                    <th rowspan="2" scope="col">Disciplinas</th>
+                    <th colspan="2" scope="colgroup">Notas</th>
+                    <th rowspan="2" scope="col">Média</th>
+                </tr>
+                <tr>
+                    <th scope="col">Nota 1</th>
+                    <th scope="col">Nota 2</th>
+                </tr>
         </thead>
         <tbody>
 
             <tr>
-                <td rowspan="4">Exatas</td>
-                <td>Matematica</td>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
+                <td class="materias">Matematica</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>        
             </tr>
             <tr>
-                <td>Física</td>
+                <td class="materias">Física</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
             <tr>
-                <td>Quimica</td>
+                <td class="materias">Quimica</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
             <tr>
-                <td>Biologia</td>
+                <td class="materias">Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr class="linha-espacial">
+                <th colspan="4" scope="row">Média de Exatas</th>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="colgroup">Humanas</th>
+                <td class="materias">História</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
             <tr>
-                <th colspan="4">Média Exatas</th>
-                <th>0.0</th>
-            </tr>
-            <tr>
-                <td rowspan="2">Humanas</td>
-                <td>História</td>
+                <td class="materias">Geográfia</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
-            <tr>
-                <td>Geográfia</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-            </tr>
-            <tr>
-                <th colspan="4">Média Humanas</th>
+            <tr class="linha-espacial">
+                <th colspan="4" scope="row">Média Humanas</th>
                 <th>0.0</th>
             </tr>
         </tbody>
